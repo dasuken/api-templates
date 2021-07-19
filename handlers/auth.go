@@ -3,7 +3,6 @@ package handlers
 import (
 	"github.com/gorilla/mux"
 	"github.com/noguchidaisuke/api-templates/util"
-	"github.com/noguchidaisuke/micro-service-with-mongo/api/restutil"
 	"io"
 	"net/http"
 )
@@ -24,7 +23,7 @@ func NewAuthHandlers() AuthHandlers {
 
 func (h *authHandlers) SignUp(w http.ResponseWriter, r *http.Request) {
 	if r.Body == nil {
-		restutil.WriteError(w, http.StatusBadRequest, restutil.ErrEmptyBody)
+		util.WriteError(w, http.StatusBadRequest, util.ErrEmptyBody)
 		return
 	}
 
@@ -32,7 +31,7 @@ func (h *authHandlers) SignUp(w http.ResponseWriter, r *http.Request) {
 
 	body, err := io.ReadAll(r.Body)
 	if err != nil {
-		restutil.WriteError(w, http.StatusBadRequest, err)
+		util.WriteError(w, http.StatusBadRequest, err)
 		return
 	}
 

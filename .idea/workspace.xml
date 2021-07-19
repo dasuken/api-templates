@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="387121df-3af4-430a-bbe9-34c9f6e0abc2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/handlers/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/auth.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middlewares/middlewares.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

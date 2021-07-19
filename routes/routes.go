@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/gorilla/mux"
+	"github.com/noguchidaisuke/api-templates/middlewares"
 	"net/http"
 )
 
@@ -14,6 +15,6 @@ type Route struct {
 
 func Install(router *mux.Router, routeList []*Route) {
 	for _, route := range routeList {
-		router.HandleFunc(route.Path, route.Handler).Methods(route.Method)
+		router.HandleFunc(route.Path, middlewares.LogRequests(route.Handler)).Methods(route.Method)
 	}
 }
