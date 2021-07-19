@@ -34,5 +34,5 @@ func main() {
 
 	log.Printf("API service runnning on [::]:%d\n", port)
 
-	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", port), router))
+	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", port), routes.WithCORS(router)))
 }
